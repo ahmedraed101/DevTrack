@@ -6,6 +6,8 @@ COPY package*.json ./
 
 RUN npm install
 
+COPY prisma ./prisma
+
 EXPOSE 4000
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "dev:with-migrations"]
